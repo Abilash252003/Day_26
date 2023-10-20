@@ -1,0 +1,18 @@
+///100 days of RTL///
+
+///Abilash P///
+
+///1:2 decoder with low enable pin//
+
+///gate flow modelling///
+
+module dec_1_to_2 (A, en, Y1, Y0);
+
+input  A,  en;
+output Y1, Y0;
+
+not n1 (p1, en);
+and a1 (Y1, p1,  A);
+and a2 (Y0, p1, ~A);
+
+endmodule
