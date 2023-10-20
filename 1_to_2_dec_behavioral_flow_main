@@ -1,0 +1,31 @@
+///100 days of RTL///
+
+///Abilash P///
+
+///1:2 decoder with low enable pin//
+
+///behavioral level modelling///
+
+module dec_1_to_2 (A, en, Y1, Y0);
+
+input  A,  en;
+output reg Y1, Y0;
+
+always @ (*)
+begin
+  if(en==1'b0)
+  begin
+    if(A==1'b0)
+    begin
+      Y0 = 1'b1;
+      Y1 = 1'b0;
+    end
+    else
+    begin
+      Y0 = 1'b0;
+      Y1 = 1'b1;
+    end
+  end
+end
+
+endmodule
